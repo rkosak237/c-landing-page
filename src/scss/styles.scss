@@ -77,6 +77,8 @@ html, body {
 
 }
 .wrapper {
+    z-index: 2;
+    position: relative;
 
     @media (min-width: $desktop-small) {
         display: flex;
@@ -290,6 +292,7 @@ html, body {
 
 .footer {
     width: 100%;
+    position: relative;
 
     &__content {
         padding: 4rem 2rem;
@@ -353,15 +356,109 @@ html, body {
         align-items: center;
         width: 15em;
 
-        a {
-            filter: grayscale(1);
-            transition: .2s ease-in-out;
+    }
+    &__social-media-icon {
+        filter: grayscale(1);
+        transition: .2s ease-in-out;
 
-            &:hover {
-                filter: grayscale(0);
-                transform: scale(1.1);
-            }
+        &:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
         }
     }
+}
+
+.team {
+    background: url('./../assets/backgrounds/Group-4-bg.png');
+    box-sizing: border-box;
+    position: relative;
+    padding: 7.1875rem 0 6.25rem 0;
+    display: flex;
+    justify-content: center;
+
+    &__overlay {
+        background: black;
+        opacity: 0.2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__members {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        @media (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem 6.25rem 1rem;
+
+    }
+
+    .member {
+
+        &__picture {
+            content: '';
+            background: $dark-bg;
+            height: 5.25rem;
+            width: 5.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__name {
+            margin: 0;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        &__title {
+            margin: 0;
+            color: $accent-color;
+            margin-bottom: 2.5rem;
+        }
+
+        &__description {
+            margin: 0;
+            color: #c7c7c8;
+            font-style: italic;
+            text-align: center;
+            width: 20.31rem;
+        }
+    }
+
+
+
+}
+
+.card__clients {
+    @extend .footer__social-media;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.card__clients-logo {
+    @extend .footer__social-media-icon;
+    padding: 2rem;
+}
+
+
+.background-square {
+    background: $accent-color;
+    position: absolute;
+    height: 78.5rem;
+    width: 78.5rem;
 }
 
