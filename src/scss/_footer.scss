@@ -1,0 +1,104 @@
+.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+
+     @media (min-width: $tablet) {
+         padding: 4rem 2rem;
+     }
+
+    &__content {
+        box-sizing: border-box;
+        width: 100%;
+
+        @media (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        margin: 0 0 1.875rem 0;
+    }
+
+    &__title {
+        font-size: 1.375rem;
+        margin: 0 0 1.875rem 0;
+    }
+
+    &__company-adress {
+        @extend .article__text;
+        line-height: 2;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 1.875rem;
+
+        li {
+            margin-top: 1.1rem;
+        }
+    }
+
+    &__nav-element {
+        text-decoration: none;
+        color: $color-p;
+    }
+
+    &__form {
+        display: flex;
+        width: 100%;
+        margin: 0 0 1.875rem 0;
+
+        @media (min-width: $tablet-landscape) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__input {
+        @extend .regiester__input;
+        background: $secondary-bg-color;
+        border: 1px solid $input-bg-footer-color;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 80%;
+        margin: 0;
+
+        &::placeholder {
+            color: $input-bg-footer-color;
+        }
+
+    }
+
+    &__newsletter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__social-media {
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15em;
+
+    }
+
+    &__social-media-icon {
+        filter: grayscale(1);
+        transition: .2s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+    }
+}

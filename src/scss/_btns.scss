@@ -1,0 +1,62 @@
+.btn {
+    all: unset;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: $btn-bg-color;
+    color: $btn-text-color;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1.1875em 6rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    transition: .2s ease-in-out;
+
+    @media (min-width: $tablet-landscape) {
+        padding: 1.1875em 6rem;
+        width: unset;
+    }
+
+    &:hover {
+        background: lighten($btn-bg-color, 10%);
+    }
+
+    &:focus {
+        background: darken($btn-bg-color, 10%);
+    }
+}
+
+
+.btn--square {
+    background: $accent-color;
+    width: unset;
+    padding: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 20%;
+    position: relative;
+
+    &:after {
+        content: url('./../assets/icons/footer/paper-plane.png');
+        position: absolute;
+        left: 0;
+        top: 27%;
+        right: 0;
+    }
+}
+
+.btn-home {
+    padding: 1.255rem 3rem;
+    margin-bottom: 1.25rem;
+    width: unset;
+}
+
+.background-square {
+    background: $accent-color;
+    position: absolute;
+    height: 78.5rem;
+    width: 78.5rem;
+}

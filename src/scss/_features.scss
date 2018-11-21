@@ -1,0 +1,60 @@
+.features {
+
+    @media (min-width: $desktop-small) {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    &__article {
+        box-sizing: border-box;
+
+        @media (min-width: $desktop-small) {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8.75rem 0 11.625rem 0;
+        }
+    }
+
+    background: $secondary-bg-color;
+
+    &__title {
+        color: $h-color;
+        font-size: 1.375rem;
+        letter-spacing: 0.05rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__mockup {
+        position: relative;
+        bottom: -4rem;
+    }
+
+    &__single-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &__icon {
+        margin-bottom: 2.1875rem;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+
+    &__text {
+        text-align: center;
+        width: 60%;
+        line-height: 1.5;
+    }
+
+    &__wrapper {
+        flex-direction: row;
+    }
+}

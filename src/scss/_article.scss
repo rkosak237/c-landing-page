@@ -1,0 +1,50 @@
+.article {
+    box-sizing: border-box;
+    width: 100%;
+
+    &__title {
+        margin-bottom: 3.125rem;
+    }
+
+    &__highlight {
+        color: $accent-color;
+    }
+
+    &__category {
+        color: $accent-color;
+        margin-bottom: 1.0625rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin: 0;
+        color: $color-p;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.026rem;
+    }
+}
+
+.card__children--centered {
+    @extend .footer__social-media;
+    flex-direction: column;
+    width: 90%;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.card__children--centered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__clients-logo {
+    @extend .footer__social-media-icon;
+    padding: 2rem;
+}

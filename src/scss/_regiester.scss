@@ -1,0 +1,91 @@
+.regiester {
+    background: $regiestration-color;
+    padding-top: 5.9375rem;
+
+    &__content {
+        @extend .article;
+        padding: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1.875rem 0;
+        position: relative;
+
+        @media (min-width: $tablet-landscape) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__category {
+        @extend .article__category;
+        text-align: center;
+
+    }
+    &__title {
+        color: $h-light;
+        margin-bottom: 3rem;
+
+        @media (min-width: $tablet-landscape) {
+            text-align: center;
+            margin-bottom: 6.5625rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        box-sizing: border-box;
+        background: $input-bg-color;
+        height: 3.0625rem;
+        padding: 1.75rem 1.8125rem;
+        border-radius: 5px;
+        border: 1px solid $inputs-border-color;
+        color: $input-text-color;
+
+        @media (min-width: $tablet-landscape) {
+            margin: 0;
+            width: 16.3125rem;
+        }
+
+        &::placeholder {
+            text-transform: uppercase;
+            color: $input-text-color;
+        }
+    }
+
+    &__details {
+        color: $regiester-text-color;
+        font-size: 1rem;
+        text-align: center;
+        margin: 1.875rem 0 1.875rem 0;
+    }
+
+    &__terms-services {
+        color: $regiester-text-color;
+    }
+
+    &__trial {
+        display: block;
+        color: $regiester-span-color;
+        margin: 0 0 2.8rem 0;
+        padding: 0 0 0 2rem;
+        position: relative;
+
+         @media (min-width: $tablet-landscape) {
+            margin: 0;
+            width: 16.3125rem;
+            position: absolute;
+            right: -0.5rem;
+            top: -3.5rem;
+         }
+
+        &:after {
+            content: url('./../assets/icons/arrow.png');
+            position: absolute;
+            left: 0.3rem;
+        }
+    }
+
+}
