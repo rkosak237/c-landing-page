@@ -1,0 +1,103 @@
+.features {
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $desktop-small) {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    &__article {
+        box-sizing: border-box;
+
+        @media (min-width: $desktop-small) {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    background: $secondary-bg-color;
+
+    &__title {
+        color: $h-color;
+        font-size: 1.375rem;
+        letter-spacing: 0.05rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__mockup {
+        position: relative;
+        bottom: -4rem;
+        display: none;
+
+        @media (min-width: $tablet-landscape) {
+            display: block;
+        }
+    }
+
+    &__single-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+        text-align: center;
+    }
+
+    &__icon {
+        margin-bottom: 2.1875rem;
+        height: 6.25rem;
+        width: 6.25rem;
+    }
+
+    &__text {
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
+
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            width: 30rem;
+        }
+    }
+
+    &__wrapper {
+        flex-direction: row;
+    }
+
+    &__img--pen-holder {
+        position: absolute;
+        top: -0.5rem;
+        left: 1rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+
+    &__img--ear-phones {
+        position: absolute;
+        top: -0.5rem;
+        right: 8rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+
+    &__img--coffee {
+        position: absolute;
+        bottom: -7.5rem;
+        right: 2rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+}

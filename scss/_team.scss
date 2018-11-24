@@ -1,0 +1,63 @@
+.team {
+    background: url('./../assets/backgrounds/Group-4-bg.png');
+    position: relative;
+    padding: 7.1875rem 0 6.25rem 0;
+
+    &__overlay {
+        background: black;
+        opacity: 0.2;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__members {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        @media (min-width: $tablet-landscape) {
+            flex-direction: row;
+        }
+    }
+
+    &__member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem 6.25rem 1rem;
+
+    }
+
+    .member {
+
+        &__picture {
+            content: '';
+            background: $dark-bg;
+            height: 5.25rem;
+            width: 5.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        &__name {
+            margin: 0;
+            color: white;
+            margin-bottom: 0.75rem;
+        }
+
+        &__title {
+            margin: 0;
+            color: $accent-color;
+            margin-bottom: 2.5rem;
+        }
+
+        &__description {
+            margin: 0;
+            color: #c7c7c8;
+            font-style: italic;
+            text-align: center;
+            width: 20.31rem;
+        }
+    }
+}

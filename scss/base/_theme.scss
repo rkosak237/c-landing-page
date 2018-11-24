@@ -1,0 +1,46 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Exo:100,400,500,800');
+
+* {
+    font-family: 'Exo',
+    sans-serif;
+}
+
+html, body {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+
+    @media (min-width: $desktop-medium)  {
+         font-size: 17px;
+    }
+
+    @media (min-width: $desktop-small) and (max-width: $desktop-medium) {
+        font-size: 16px;
+    }
+    @media (min-width: $tablet-landscape) and (max-width: $desktop-small) {
+        font-size: 15px;
+    }
+
+    @media (min-width: $tablet) and (max-width: $tablet-landscape) {
+        font-size: 14px;
+    }
+
+    @media (min-width: $phone) and (max-width: $phone-big) {
+        font-size: 13px;
+    }
+
+}
+
+
+h2 {
+    font-size: 2.4375rem;
+}
+
+h2, h3 {
+    margin: 0;
+    font-weight: 500;
+}

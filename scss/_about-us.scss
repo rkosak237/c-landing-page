@@ -1,0 +1,81 @@
+.about-us {
+    justify-content: center;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet) {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .wrapper {
+        @media (min-width: $desktop-small) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        @media (min-width: $tablet)
+        and (max-width: $tablet-landscape) {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+    }
+
+    &__article {
+        @extend .article;
+        width: 100%;
+
+        @media (min-width: $tablet-landscape) {
+            width: 35rem;
+            padding: 10rem 0rem;
+        }
+
+        @media (min-width: $tablet) and
+         (max-width: $tablet-landscape) {
+            padding: 5rem 2rem;
+        }
+
+    }
+
+    //placeholder
+    &__empty--bg-2-clr {
+        display: none;
+
+        @media (min-width: $tablet-landscape) {
+            display: block;
+            background: $secondary-bg-color;
+            height: 100%;
+            width: 40%;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0px 0 38rem 55rem;
+                border-color: transparent transparent $accent-color transparent;
+            }
+        }
+    }
+
+    //container styling - specific for this section
+
+    &__container {
+        @media (min-width: $desktop-small) {
+            width: 1170px;
+        }
+
+        @media (min-width: $tablet) and (max-width: $tablet-landscape) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+

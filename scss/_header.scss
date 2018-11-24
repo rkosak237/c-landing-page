@@ -1,0 +1,72 @@
+.header {
+    background-image: url('./../assets/backgrounds/background-small-2x1\,3k.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+
+    @media (min-width: $desktop-small) {
+        background-position: 30% 10%;
+        background-size: 126%;
+    }
+
+    &__title {
+        color: $h-color;
+        font-size: 3.75rem;
+        font-weight: 100;
+        letter-spacing: 0.075rem;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 2.875rem;
+        padding: 0rem 2rem;
+
+        @media (min-width: $tablet) {
+            padding: 0rem;
+        }
+    }
+
+    &__play-btn {
+        background: $btn-play-color;
+        border-radius: 50%;
+        height: 3.75rem;
+        width: 3.75rem;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 2.5rem;
+        border: 0;
+        opacity: 0.7;
+        transition: .2s ease-in-out;
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0.625rem 0 0.625rem 0.875rem;
+            border-color: transparent transparent transparent #ffffff;
+            position: absolute;
+            bottom: 33%;
+            left: 45%;
+        }
+
+        &:hover {
+            background: lighten($btn-play-color, 10%);
+        }
+
+        &:focus {
+             background: darken($btn-play-color, 10%);
+        }
+    }
+}
+
+.details,
+.header__details {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.075rem;
+    color: $small-color;
+}

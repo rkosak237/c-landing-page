@@ -1,0 +1,30 @@
+// One common styling for sections
+.about-us,
+.team,
+.product,
+.features,
+.features-overview,
+.regiester,
+.footer {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.container,
+.wrapper {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper {
+
+    @media (min-width: $desktop-small) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1170px;
+    }
+}

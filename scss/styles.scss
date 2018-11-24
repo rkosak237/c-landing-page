@@ -1,0 +1,19 @@
+// base folder
+@import "./base/normalize";
+@import "./base/media-queries";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/theme";
+
+//components
+@import "./containers";
+@import "./article";
+@import "./header";
+@import "./about-us";
+@import "./team";
+@import "./features";
+@import "./product";
+@import "./features-overview";
+@import "./btns";
+@import "./regiester";
+@import "./footer";
