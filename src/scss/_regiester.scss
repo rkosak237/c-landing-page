@@ -5,6 +5,7 @@
     &__content {
         @extend .article;
         padding: 0;
+        width: 100%;
     }
 
     &__form {

@@ -1,4 +1,6 @@
 .features {
+    position: relative;
+    overflow: hidden;
 
     @media (min-width: $desktop-small) {
         justify-content: center;
@@ -15,7 +17,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 8.75rem 0 11.625rem 0;
         }
     }
 
@@ -31,6 +32,11 @@
     &__mockup {
         position: relative;
         bottom: -4rem;
+        display: none;
+
+        @media (min-width: $tablet-landscape) {
+            display: block;
+        }
     }
 
     &__single-feature {
@@ -50,11 +56,48 @@
 
     &__text {
         text-align: center;
-        width: 60%;
+        width: 100%;
         line-height: 1.5;
+
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            width: 30rem;
+        }
     }
 
     &__wrapper {
         flex-direction: row;
+    }
+
+    &__img--pen-holder {
+        position: absolute;
+        top: -0.5rem;
+        left: 1rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+
+    &__img--ear-phones {
+        position: absolute;
+        top: -0.5rem;
+        right: 8rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+
+    &__img--coffee {
+        position: absolute;
+        bottom: -7.5rem;
+        right: 2rem;
+        display: none;
+
+        @media all and (min-width: $desktop-small) {
+            display: block;
+        }
     }
 }

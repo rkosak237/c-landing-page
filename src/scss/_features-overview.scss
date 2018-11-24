@@ -12,6 +12,10 @@
     }
     &__text {
         text-align: center;
+
+        @media (min-width: $tablet) {
+            width: 70%;
+        }
     }
 }
 

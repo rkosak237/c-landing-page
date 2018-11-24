@@ -6,62 +6,14 @@
 @import "./base/theme";
 
 //components
-@import "./header";
-@import "./team";
+@import "./containers";
 @import "./article";
+@import "./header";
+@import "./about-us";
+@import "./team";
 @import "./features";
+@import "./product";
 @import "./features-overview";
 @import "./btns";
 @import "./regiester";
 @import "./footer";
-
-html, body {
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-
-    @media (min-width: $desktop-medium)  {
-         font-size: 17px;
-    }
-
-    @media (min-width: $desktop-small) and (max-width: $desktop-medium) {
-        font-size: 16px;
-    }
-    @media (min-width: $tablet-landscape) and (max-width: $desktop-small) {
-        font-size: 15px;
-    }
-
-    @media (min-width: $tablet) and (max-width: $tablet-landscape) {
-        font-size: 14px;
-    }
-
-    @media (min-width: $phone) and (max-width: $phone-big) {
-        font-size: 13px;
-    }
-
-}
-.design, .team, .features, .features-overview, .regiester, .footer {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    padding: 4rem 2rem;
-}
-
-.container, .wrapper {
-    z-index: 2;
-    position: relative;
-    width: 100%;
-}
-.wrapper {
-
-    @media (min-width: $desktop-small) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        width: 1170px;
-    }
-}
