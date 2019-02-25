@@ -352,7 +352,7 @@ h2, h3 {
 .product,
 .features,
 .features-overview,
-.regiester,
+.register,
 .footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -383,7 +383,7 @@ h2, h3 {
     justify-content: center;
     width: 1170px; } }
 
-.article, .about-us__article, .regiester__content {
+.article, .about-us__article, .register__content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .article__title {
@@ -393,13 +393,13 @@ h2, h3 {
         text-align: center; } }
   .article__highlight {
     color: #fb8686; }
-  .article__category, .regiester__category {
+  .article__category, .register__category {
     color: #fb8686;
     margin-bottom: 1.0625rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase; }
     @media (min-width: 560px) and (max-width: 768px) {
-      .article__category, .regiester__category {
+      .article__category, .register__category {
         text-align: center; } }
   .article__text, .footer__company-adress {
     margin: 0;
@@ -579,10 +579,14 @@ h2, h3 {
       justify-content: flex-start; } }
   .about-us__article {
     width: 100%; }
-    @media (min-width: 1024px) {
+    @media (min-width: 1280px) {
       .about-us__article {
         width: 35rem;
         padding: 10rem 0rem; } }
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      .about-us__article {
+        width: 35rem;
+        padding: 10rem 2rem; } }
     @media (min-width: 768px) and (max-width: 1024px) {
       .about-us__article {
         padding: 5rem 2rem; } }
@@ -596,7 +600,8 @@ h2, h3 {
         width: 40%;
         overflow: hidden;
         position: absolute;
-        right: 0; }
+        right: 0;
+        top: 0; }
         .about-us__empty--bg-2-clr::after {
           display: block;
           content: '';
@@ -639,7 +644,10 @@ h2, h3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     @media (min-width: 1024px) {
       .team__members {
         -webkit-box-orient: horizontal;
@@ -661,26 +669,31 @@ h2, h3 {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 0 1rem 6.25rem 1rem; }
-  .team .member__picture {
-    content: '';
-    background: #4e4e5e;
-    height: 5.25rem;
-    width: 5.25rem;
-    margin-bottom: 1.25rem; }
-  .team .member__name {
-    margin: 0;
-    color: white;
-    margin-bottom: 0.75rem; }
-  .team .member__title {
-    margin: 0;
-    color: #fb8686;
-    margin-bottom: 2.5rem; }
-  .team .member__description {
-    margin: 0;
-    color: #c7c7c8;
-    font-style: italic;
-    text-align: center;
-    width: 20.31rem; }
+  .team .member {
+    width: 50%; }
+    @media (min-width: 1024px) {
+      .team .member {
+        width: 100%; } }
+    .team .member__picture {
+      content: '';
+      background: #4e4e5e;
+      height: 5.25rem;
+      width: 5.25rem;
+      margin-bottom: 1.25rem; }
+    .team .member__name {
+      margin: 0;
+      color: white;
+      margin-bottom: 0.75rem; }
+    .team .member__title {
+      margin: 0;
+      color: #fb8686;
+      margin-bottom: 2.5rem; }
+    .team .member__description {
+      margin: 0;
+      color: #c7c7c8;
+      font-style: italic;
+      text-align: center;
+      width: 100%; }
 
 .features {
   position: relative;
@@ -929,13 +942,13 @@ h2, h3 {
   height: 78.5rem;
   width: 78.5rem; }
 
-.regiester {
+.register {
   background: #323969;
   padding-top: 5.9375rem; }
-  .regiester__content {
+  .register__content {
     padding: 0;
     width: 100%; }
-  .regiester__form {
+  .register__form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -946,7 +959,7 @@ h2, h3 {
     margin: 0 0 1.875rem 0;
     position: relative; }
     @media (min-width: 1024px) {
-      .regiester__form {
+      .register__form {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -954,16 +967,16 @@ h2, h3 {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between; } }
-  .regiester__category {
+  .register__category {
     text-align: center; }
-  .regiester__title {
+  .register__title {
     color: #fff;
     margin-bottom: 3rem; }
     @media (min-width: 1024px) {
-      .regiester__title {
+      .register__title {
         text-align: center;
         margin-bottom: 6.5625rem; } }
-  .regiester__input, .footer__input {
+  .register__input, .footer__input {
     width: 100%;
     margin-bottom: 1.5rem;
     -webkit-box-sizing: border-box;
@@ -975,39 +988,39 @@ h2, h3 {
     border: 1px solid #999cb4;
     color: #f6f5f3; }
     @media (min-width: 1024px) {
-      .regiester__input, .footer__input {
+      .register__input, .footer__input {
         margin: 0;
-        width: 16.3125rem; } }
-    .regiester__input::-webkit-input-placeholder, .footer__input::-webkit-input-placeholder {
+        width: 15.3125rem; } }
+    .register__input::-webkit-input-placeholder, .footer__input::-webkit-input-placeholder {
       text-transform: uppercase;
       color: #f6f5f3; }
-    .regiester__input::-ms-input-placeholder, .footer__input::-ms-input-placeholder {
+    .register__input::-ms-input-placeholder, .footer__input::-ms-input-placeholder {
       text-transform: uppercase;
       color: #f6f5f3; }
-    .regiester__input::placeholder, .footer__input::placeholder {
+    .register__input::placeholder, .footer__input::placeholder {
       text-transform: uppercase;
       color: #f6f5f3; }
-  .regiester__details {
+  .register__details {
     color: #999cb4;
     font-size: 1rem;
     text-align: center;
     margin: 1.875rem 0 1.875rem 0; }
-  .regiester__terms-services {
+  .register__terms-services {
     color: #999cb4; }
-  .regiester__trial {
+  .register__trial {
     display: block;
     color: #f6f5f3;
     margin: 0 0 2.8rem 0;
     padding: 0 0 0 2rem;
     position: relative; }
     @media (min-width: 1024px) {
-      .regiester__trial {
+      .register__trial {
         margin: 0;
         width: 16.3125rem;
         position: absolute;
         right: -0.5rem;
         top: -3.5rem; } }
-    .regiester__trial:after {
+    .register__trial:after {
       content: url("./../assets/icons/arrow.png");
       position: absolute;
       left: 0.3rem; }

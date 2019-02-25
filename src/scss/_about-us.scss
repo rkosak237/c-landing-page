@@ -1,47 +1,38 @@
 .about-us {
     justify-content: center;
     box-sizing: border-box;
-
     @media (min-width: $tablet) {
         justify-content: space-between;
         padding: 0;
     }
-
     .wrapper {
         @media (min-width: $desktop-small) {
             display: flex;
             justify-content: center;
             width: 100%;
         }
-
-        @media (min-width: $tablet)
-        and (max-width: $tablet-landscape) {
+        @media (min-width: $tablet) and (max-width: $tablet-landscape) {
             display: flex;
             justify-content: flex-start;
         }
-
     }
-
     &__article {
         @extend .article;
         width: 100%;
-
-        @media (min-width: $tablet-landscape) {
+        @media (min-width: $desktop-small) {
             width: 35rem;
             padding: 10rem 0rem;
         }
-
-        @media (min-width: $tablet) and
-         (max-width: $tablet-landscape) {
+        @media (min-width: $tablet-landscape) and (max-width: $desktop-small) {
+            width: 35rem;
+            padding: 10rem 2rem;
+        }
+        @media (min-width: $tablet) and (max-width: $tablet-landscape) {
             padding: 5rem 2rem;
         }
-
-    }
-
-    //placeholder
+    } //placeholder
     &__empty--bg-2-clr {
         display: none;
-
         @media (min-width: $tablet-landscape) {
             display: block;
             background: $secondary-bg-color;
@@ -50,7 +41,7 @@
             overflow: hidden;
             position: absolute;
             right: 0;
-
+            top: 0;
             &::after {
                 display: block;
                 content: '';
@@ -63,19 +54,14 @@
                 border-color: transparent transparent $accent-color transparent;
             }
         }
-    }
-
-    //container styling - specific for this section
-
+    } //container styling - specific for this section
     &__container {
         @media (min-width: $desktop-small) {
             width: 1170px;
         }
-
         @media (min-width: $tablet) and (max-width: $tablet-landscape) {
             display: flex;
             justify-content: center;
         }
     }
 }
-

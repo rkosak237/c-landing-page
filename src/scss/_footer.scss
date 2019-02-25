@@ -64,7 +64,7 @@
     }
 
     &__input {
-        @extend .regiester__input;
+        @extend .register__input;
         background: $secondary-bg-color;
         border: 1px solid $input-bg-footer-color;
         border-top-right-radius: 0;
